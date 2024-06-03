@@ -1,18 +1,16 @@
 pub fn find_memo(text: &str) -> String {
-    
     let words = text.split(' ');
-    
-    let mut counter:i8 = 1;
+    let mut counter: i8 = 1;
+
     for word in words {
         if word == "Nemo" {
-            let text = format!("I found Nemo at {}!", counter );
-            return text
+            let text = format!("I found Nemo at {}!", counter);
+            return text;
         }
         counter += 1;
     }
-    
-    return "I didn't find Nemo".to_string()
-    
+
+    return "I didn't find Nemo".to_string();
 }
 
 #[cfg(test)]
@@ -21,7 +19,7 @@ mod tests {
 
     #[test]
     fn text1() {
-        assert_eq!(find_memo("I am finding Nemo !"), "I found Nemo at 4!");       
+        assert_eq!(find_memo("I am finding Nemo !"), "I found Nemo at 4!");
     }
 
     #[test]
@@ -40,7 +38,9 @@ mod tests {
 
     #[test]
     fn text5() {
-        assert_eq!(find_memo("Nemo N°1 and Nemo N°2 are different"), "I found Nemo at 1!")
+        assert_eq!(
+            find_memo("Nemo N°1 and Nemo N°2 are different"),
+            "I found Nemo at 1!"
+        )
     }
-
 }

@@ -62,9 +62,9 @@ cargo test
 | Day #2   | [Finding Nemo](../../tree/main/Week-01/Day-02_Finding-Nemo)                                                   | :white_check_mark:   |
 | Day #3   | [Barbecue Skewers](../../tree/main/Week-01/Day-03_Barbecue-Skewers)                                           | :white_check_mark:   |
 | Day #4   | [Is Johnny Making Progress](../../tree/main/Week-01/Day-04_Is-Johnny-Making-Progress)                         | :white_check_mark:   |
-| Day #5   | [Pair Of Socks](../../tree/main/Week-01/Day-05_Pair-Of-Socks)                                                 | :white_large_square: |
-| Day #6   | [Next Prime](../../tree/main/Week-01/Day-06_Next-Prime)                                                       | :white_large_square: |
-| Day #7   | [Merge Sorted Array](../../tree/main/Week-01/Day-07_Merge-Sorted-Array)                                       | :white_large_square: |
+| Day #5   | [Pair Of Socks](../../tree/main/Week-01/Day-05_Pair-Of-Socks)                                                 | :white_check_mark:   |
+| Day #6   | [Next Prime](../../tree/main/Week-01/Day-06_Next-Prime)                                                       | :white_check_mark:   |
+| Day #7   | [Merge Sorted Array](../../tree/main/Week-01/Day-07_Merge-Sorted-Array)                                       | :white_check_mark:   |
 | Day #8   | [Letter Combinations Of A Phone Number](../../tree/main/Week-02/Day-08_Letter-Combinations-Of-A-Phone-Number) | :white_large_square: |
 | Day #9   | [Trapping Rain Water](../../tree/main/Week-02/Day-09_Trapping-Rain-Water)                                     | :white_large_square: |
 | Day #10  | [Unique Binary Search Tree](../../tree/main/Week-02/Day-10_Unique-Binary-Search-Trees)                        | :white_large_square: |

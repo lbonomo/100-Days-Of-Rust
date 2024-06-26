@@ -1,6 +1,6 @@
 use std::collections::HashMap;
-
 use lazy_static::lazy_static;
+
 lazy_static! {
     static ref DIGITS: HashMap<u8, Vec<&'static str>> = HashMap::from([
         (2, vec!["a", "b", "c"]),
@@ -18,16 +18,16 @@ pub fn add(digits:u8) -> Vec<&'static str> {
     // - `0 <= digits.length <= 4`
     // - `digits[i] is a digit in the range ['2', '9'].`
 
-    // if digits.len() == 0 { return vec![]; }
- 
+    if digits.len() == 0 { return vec![]; }
+    if digits.len() == 1 { return &DIGITS[&digits] }
 
-    if digits == 2 {
-        let words = DIGITS[&digits]; 
-        return  words
-    } else {
-        let words = DIGITS[&digits];
-        return words
-    }
+    // if digits == 2 {
+    //     let words = &DIGITS[&digits];
+    //     return  words
+    // } else {
+    //     let words = &DIGITS[&digits];
+    //     return words
+    // }
 
     // match dig.get(&4) {
     //     Some(d) => return d,

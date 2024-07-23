@@ -69,7 +69,7 @@ cargo test
 | Day #9   | [Trapping Rain Water](../../tree/main/Week-02/Day-09_Trapping-Rain-Water)                                     | :white_large_square: |
 | Day #10  | [Unique Binary Search Tree](../../tree/main/Week-02/Day-10_Unique-Binary-Search-Trees)                        | :white_large_square: |
 | Day #11  | [Restore IP Addresses](../../tree/main/Week-02/Day-11_Restore-IP-Addresses)                                   | :white_large_square: |
-| Day #12  | [Mountains or Valleys](../../tree/main/Week-02/Day-12_Mountains_And_Valleys)                                  | :white_large_square: |
+| Day #12  | [Mountains or Valleys](../../tree/main/Week-02/Day-12_Mountains_And_Valleys)                                  | :white_check_mark:   |
 | Day #13  | [Need Help With Your Packing](../../tree/main/Week-02/Day-13_Need-Help-With-Packing)                          | :white_large_square: |
 | Day #14  | [The Karacas Encryption Algorithm](../../tree/main/Week-02/Day-14_Karacas-Encryption-Algorithm)               | :white_large_square: |
 | Day #15  | [Valid Anagram](../../tree/main/Week-03/Day-15_Valid-Anagram)                                                 | :white_large_square: |

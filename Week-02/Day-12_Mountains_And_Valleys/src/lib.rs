@@ -1,52 +1,35 @@
-pub fn landscape_type(mut nums: Vec<u8>) -> &'static str {
-    let mut landscape = "neither";
-    let mut previus:u8 = 0;
-    let mut count:u8 = 0;
-    let mut changes:u8 = 0;
-    // let size = nums.len();
+pub fn landscape_type(nums: Vec<u8>) -> &'static str {
+    let mut previus: Option<u8> = None;
+    let mut directions: Vec<&str> = Vec::new();
 
     for current in nums {
-        let previous_landscape = landscape;
-        count += 1;
-        if count == 1 {
-            previus = current;
+        if previus != None {
+            if Some(current) > previus {
+                previus = Some(current);
+                if directions.last() != Some(&"up") {
+                    directions.push("up");
+                }
+            } else if Some(current) < previus {
+                previus = Some(current);
+                if directions.last() != Some(&"down") {
+                    directions.push("down");
+                }
+            }
         } else {
-            if current > previus && ( landscape == "neither" || landscape == "mountain") {
-                previus = current;
-                landscape = "mountain"
-            }
-            else if current < previus && landscape == "mountain" {
-                previus = current;
-                landscape = "mountain"
-            }
-            else if current < previus && ( landscape == "neither" || landscape == "valley") {
-                previus = current;
-                landscape = "valley"
-            }
-            else if current > previus && landscape == "valley" {
-                previus = current;
-                landscape = "valley"
-            }
-            else {
-                landscape = "valley"
-            }
-        }
-        if previous_landscape != landscape {
-            changes += 1;
+            previus = Some(current);
         }
     }
-
-    if changes > 1 {
-        return landscape;
-    } else {
-        return "neither";
+    match directions.join("-").as_str() {
+        "up-down" => return "mountain",
+        "down-up" => return "valley",
+        _ => return "neither",
     }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
-        
+
     #[test]
     fn test01() {
         // LandscapeType([3, 4, 5, 4, 3]) ➞ "mountain"
@@ -60,14 +43,14 @@ mod tests {
         let result = landscape_type(vec![9, 7, 3, 1, 2, 4]);
         assert_eq!(result, "valley");
     }
-    
+
     #[test]
     fn test03() {
         // LandscapeType([9, 8, 9]) ➞ "valley"
         let result = landscape_type(vec![9, 8, 9]);
         assert_eq!(result, "valley");
     }
-    
+
     #[test]
     fn test04() {
         // LandscapeType([9, 8, 9, 8]) ➞ "neither"
